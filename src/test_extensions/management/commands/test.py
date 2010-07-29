@@ -110,11 +110,10 @@ class Command(BaseCommand):
                     test_labels.remove(app)
                 except ValueError:
                     pass
-                    
         test_options = dict(verbosity=verbosity,
             interactive=interactive)
             
-        test_options["failfast"] = failfast
+        #test_options["failfast"] = failfast
 
         if options.get('coverage'):
             test_options["callgraph"] = callgraph
